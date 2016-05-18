@@ -15,6 +15,10 @@ IF %ERRORLEVEL% NEQ 0 (
   goto error
 )
 
+echo Using the following node and npm version.
+node -v
+npm -v
+
 :: Setup
 :: -----
 
@@ -100,7 +104,7 @@ call :SelectNodeVersion
 :: 3. Install npm packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd "D:\Program Files (x86)\npm\3.1.0\npm" install --production
+  call :ExecuteCmd !NPM_CMD! install --production
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
