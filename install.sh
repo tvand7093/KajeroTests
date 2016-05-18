@@ -31,7 +31,7 @@ then
 fi
 
 echo Using npm version
-"$FULL_NPM" -v
+$FULL_NPM -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
 $FULL_NPM config set strict-ssl false
@@ -42,12 +42,6 @@ echo Installing kajero
 $FULL_NPM install -g kajero
 
 echo Done installing kajero
-
-# echo Running gulp on kajero
-
-# node_modules/gulp/bin/gulp node_modules/kajero
-
-# echo Done running gulp on kajero
 
 # get all markdown files in the markdown folder.
 FILES=./markdown/*.md
