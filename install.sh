@@ -5,7 +5,8 @@ node -v
 npm -v
 
 # ensuring latest npm version
-curl -L https://www.npmjs.com/install.sh | sh
+echo Upgrading npm version...
+npm install -g npm
 
 # Ensure strict ssl is turned off. This is an Azure issue.
 npm config set strict-ssl false
