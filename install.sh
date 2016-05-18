@@ -2,30 +2,30 @@
 NPM=$NPM_CMD
 NODE=$NODE_EXE
 
-if [ -n $NPM_CMD ] 
+if [ -n "$NPM_CMD" ] 
 then
   NPM=npm
 fi
 
-if [ -n $NODE_EXE ]
+if [ -n "$NODE_EXE" ]
 then
   NODE=node
 fi
 
-echo $NODE
-echo $NPM
+echo Using node: "$NODE"
+echo Using npm: "$NPM"
 
 echo Using the following node and npm version
-$NODE -v
-$NPM -v
+"$NODE" -v
+"$NPM" -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
-$NPM config set strict-ssl false
+"$NPM" config set strict-ssl false
 
 echo Installing kajero
 
 # setup kajero
-$NPM install -g kajero
+"$NPM" install -g kajero
 
 echo Done installing kajero
 
