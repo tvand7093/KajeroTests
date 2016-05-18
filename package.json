@@ -2,11 +2,18 @@
   "name": "docs",
   "version": "1.0.0",
   "description": "This is a test of the kajero markdown document generator.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "bash generate.sh"
+    "preinstall": "bash generate.sh",
+    "start": "bash generate.sh && node ."
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "13.4.0",
+    "inert": "4.0.0",
+    "hoek": "4.0.0",
+    "path": "0.12.7"
+  }
 }

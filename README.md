@@ -1,4 +1,4 @@
-# AgencyRM Docs
+# Kajero based website
 This is a test of the kajero markdown document generator. 
 
 ### Dependencies

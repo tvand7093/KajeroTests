@@ -2,7 +2,7 @@
 
 # check for kajero command
 command -v kajero >/dev/null 2>&1 || { 
-    echo "Kajero missing from system. Installing..." >&2;
+    echo "Kajero missing from system. Installing..."
     npm install -g kajero
 }
 
@@ -24,8 +24,9 @@ do
     filename="${filename%.*}"
 
     # process each file
-    echo "Processing $filename file..."
+    echo "Processing markdown file: $file"
     
     # generate html using kajero
     kajero html $file > generated/$filename.html
+    
 done
