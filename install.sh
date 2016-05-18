@@ -22,26 +22,29 @@ echo Is Azure Mode: $AZURE
 echo Using node version
 "$NODE" -v
 
-FULL_NPM="npm"
-
 if [ $AZURE -eq 1 ]
 then
-  # not azuer, so use local npm
-  FULL_NPM=`node "$NPM"`
+  # Azure usage
+  
+  # Ensure strict ssl is turned off. This is an Azure issue.
+  $NODE $NPM config set strict-ssl false
+  
+  echo Using npm version
+  $NODE $NPM -v
+  
+  # setup kajero
+  echo Installing kajero
+  $NODE $NPM install -g kajero
+  echo Done installing kajero
+else
+  echo Using npm version
+  npm -v
+  
+  # setup kajero
+  echo Installing kajero
+  npm install -g kajero
+  echo Done installing kajero
 fi
-
-echo Using npm version
-eval "$FULL_NPM -v"
-
-# Ensure strict ssl is turned off. This is an Azure issue.
-eval $FULL_NPM config set strict-ssl false
-
-echo Installing kajero
-
-# setup kajero
-eval $FULL_NPM install -g kajero
-
-echo Done installing kajero
 
 # get all markdown files in the markdown folder.
 FILES=./markdown/*.md
