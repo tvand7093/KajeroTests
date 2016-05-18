@@ -19,8 +19,8 @@ echo Using node: "$NODE"
 echo Using npm: "$NPM"
 
 echo Using the following node and npm version
-"$NODE" -v
-"$NPM" -v
+call "$NODE" -v
+bash call "$NPM" -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
 "$NPM" config set strict-ssl false
@@ -28,7 +28,7 @@ echo Using the following node and npm version
 echo Installing kajero
 
 # setup kajero
-"$NODE $NPM" install -g kajero
+"$NPM" install -g kajero
 
 echo Done installing kajero
 
