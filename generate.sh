@@ -4,6 +4,7 @@
 npm config set strict-ssl false
 
 # ensure latest npm
+npm update -g
 npm install -g npm
 
 # check for kajero command
