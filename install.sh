@@ -22,7 +22,7 @@ echo Is Azure Mode: $AZURE
 echo Using node version
 "$NODE" -v
 
-FULL_NPM="node \"$NPM\""
+FULL_NPM="node '$NPM'"
 
 if [ $AZURE -eq 0 ]
 then
