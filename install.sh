@@ -4,6 +4,9 @@ echo Using the following node and npm version.
 node -v
 npm -v
 
+# ensuring latest npm version
+curl -L https://www.npmjs.com/install.sh | sh
+
 # Ensure strict ssl is turned off. This is an Azure issue.
 npm config set strict-ssl false
 
