@@ -1,36 +1,39 @@
 #!/bin/bash
-
-
+NPM=$NPM_CMD
+NODE=$NODE_EXE
 
 if [ -n $NPM_CMD ] 
 then
-  NPM_CMD = npm
+  NPM=npm
 fi
 
 if [ -n $NODE_EXE ]
 then
-  NODE_EXE = node
+  NODE=node
 fi
 
+echo $NODE
+echo $NPM
+
 echo Using the following node and npm version
-$NODE_EXE -v
-$NPM_CMD -v
+$NODE -v
+$NPM -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
-$NPM_CMD config set strict-ssl false
+$NPM config set strict-ssl false
 
 echo Installing kajero
 
 # setup kajero
-$NPM_CMD install node_modules/kajero 
+$NPM install -g kajero
 
 echo Done installing kajero
 
-echo Running gulp on kajero
+# echo Running gulp on kajero
 
-node_modules/gulp/bin/gulp node_modules/kajero
+# node_modules/gulp/bin/gulp node_modules/kajero
 
-echo Done running gulp on kajero
+# echo Done running gulp on kajero
 
 # get all markdown files in the markdown folder.
 FILES=./markdown/*.md

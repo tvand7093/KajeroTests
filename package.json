@@ -16,9 +16,7 @@
     "hapi": "13.4.0",
     "inert": "4.0.0",
     "hoek": "4.0.0",
-    "path": "0.12.7",
-    "kajero" : "0.1.0",
-    "request": "2.72.0"
+    "path": "0.12.7"
   },
   "repository": {
     "code" : "https://github.com/tvand7093/KajeroTests"
