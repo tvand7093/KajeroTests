@@ -16,8 +16,8 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo Using the following node and npm version.
-node -v
-npm -v
+call node -v
+call npm -v
 
 :: Setup
 :: -----
