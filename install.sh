@@ -1,26 +1,28 @@
 #!/bin/bash
 
-echo Using the following node and npm version
-echo Using NPM Path !NPM_CMD!...
-echo Using NPM Path $NPM_CMD...
 
-node -v
-npm -v
+
+if [ -n $NPM_CMD ] 
+then
+  NPM_CMD = npm
+fi
+
+if [ -n $NODE_EXE ]
+then
+  NODE_EXE = node
+fi
+
+echo Using the following node and npm version
+$NODE_EXE -v
+$NPM_CMD -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
-npm config set strict-ssl false
-
-# ensuring latest npm version
-echo Upgrading npm version...
-npm install -g npm
-
-echo Done upgrading npm. New version is the following.
-npm -v
+$NPM_CMD config set strict-ssl false
 
 echo Installing kajero
 
 # setup kajero
-npm install node_modules/kajero 
+$NPM_CMD install node_modules/kajero 
 
 echo Done installing kajero
 
