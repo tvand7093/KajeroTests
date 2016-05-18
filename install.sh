@@ -9,7 +9,7 @@ npm config set strict-ssl false
 
 # ensuring latest npm version
 echo Upgrading npm version...
-#npm install -g npm
+npm install -g npm
 
 echo Done upgrading npm. New version is the following.
 npm -v
