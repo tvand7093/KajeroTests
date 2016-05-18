@@ -1,6 +1,7 @@
 {   
   "engines": {
-    "node" : ">=v6.1.0"
+    "node" : "6.1.0",
+    "npm" : "3.8.6"
   },
   "name": "docs",
   "version": "1.0.0",
