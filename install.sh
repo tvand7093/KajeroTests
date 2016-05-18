@@ -1,5 +1,7 @@
 #!/bin/bash
-NPM=$NPM_CMD
+#NPM=$NPM_CMD
+
+NPM="C:\Program Files (x86)\npm\3.8.6\node_modules\npm"
 NODE=$NODE_EXE
 
 if [ -z "$NPM" ] 
@@ -17,7 +19,7 @@ echo Using npm: "$NPM"
 
 echo Using the following node and npm version
 "$NODE" -v
-bash "$NPM" -v
+"$NPM" -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
 "$NPM" config set strict-ssl false
