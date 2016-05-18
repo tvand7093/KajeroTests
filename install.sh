@@ -31,7 +31,7 @@ then
 fi
 
 echo Using npm version
-eval "$FULL_NPM" -v
+eval "$FULL_NPM -v"
 
 # Ensure strict ssl is turned off. This is an Azure issue.
 eval $FULL_NPM config set strict-ssl false
