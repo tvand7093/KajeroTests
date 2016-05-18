@@ -22,12 +22,12 @@ echo Is Azure Mode: $AZURE
 echo Using node version
 "$NODE" -v
 
-FULL_NPM="node '$NPM'"
+FULL_NPM="npm"
 
-if [ $AZURE -eq 0 ]
+if [ $AZURE -eq 1 ]
 then
   # not azuer, so use local npm
-  FULL_NPM="npm"
+  FULL_NPM=node "$NPM"
 fi
 
 echo Using npm version
