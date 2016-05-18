@@ -3,6 +3,9 @@
 # Ensure strict ssl is turned off. This is an Azure issue.
 npm config set strict-ssl false
 
+# ensure latest npm
+npm install -g npm
+
 # check for kajero command
 command -v kajero >/dev/null 2>&1 || { 
     echo "Kajero missing from system. Installing..."
