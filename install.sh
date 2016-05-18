@@ -19,8 +19,8 @@ echo Using node: "$NODE"
 echo Using npm: "$NPM"
 
 echo Using the following node and npm version
-call "$NODE" -v
-bash call "$NPM" -v
+"$NODE" -v
+bash "$NPM" -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
 "$NPM" config set strict-ssl false
