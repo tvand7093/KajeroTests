@@ -31,15 +31,15 @@ then
 fi
 
 echo Using npm version
-$FULL_NPM -v
+eval $FULL_NPM -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
-$FULL_NPM config set strict-ssl false
+eval $FULL_NPM config set strict-ssl false
 
 echo Installing kajero
 
 # setup kajero
-$FULL_NPM install -g kajero
+eval $FULL_NPM install -g kajero
 
 echo Done installing kajero
 
