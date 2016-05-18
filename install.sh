@@ -1,19 +1,16 @@
 #!/bin/bash
-# NPM=$NPM_CMD
-# NODE=$NODE_EXE
+NPM=$NPM_JS_PATH
+NODE=$NODE_EXE
 
-NODE=node
-NPM="D:\Program Files (x86)\npm\3.8.6\node_modules\npm\bin\npm-cli.js"
+if [ -z "$NPM" ] 
+then
+  NPM=npm
+fi
 
-# if [ -z "$NPM" ] 
-# then
-#   NPM=npm
-# fi
-
-# if [ -z "$NODE" ]
-# then
-#   NODE=node
-# fi
+if [ -z "$NODE" ]
+then
+  NODE=node
+fi
 
 echo Using node: "$NODE"
 echo Using npm: "$NPM"
@@ -23,12 +20,12 @@ echo Using the following node and npm version
 node "$NPM" -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
-"$NPM" config set strict-ssl false
+node "$NPM" config set strict-ssl false
 
 echo Installing kajero
 
 # setup kajero
-"$NPM" install -g kajero
+node "$NPM" install -g kajero
 
 echo Done installing kajero
 
