@@ -5,7 +5,7 @@ npm config set strict-ssl false
 
 # setup kajero
 npm install node_modules/kajero 
-gulp node_modules/kajero
+node_modules/gulp/bin/gulp node_modules/kajero
 
 # get all markdown files in the markdown folder.
 FILES=./markdown/*.md
