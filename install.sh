@@ -1,31 +1,45 @@
 #!/bin/bash
 NPM=$NPM_JS_PATH
 NODE=$NODE_EXE
+AZURE=1
 
 if [ -z "$NPM" ] 
 then
   NPM=npm
+  AZURE=0
 fi
 
 if [ -z "$NODE" ]
 then
   NODE=node
+  AZURE=0
 fi
 
-echo Using node: "$NODE"
-echo Using npm: "$NPM"
+echo Using node at path: "$NODE"
+echo Using npm at path: "$NPM"
+echo Is Azure Mode: $AZURE
 
-echo Using the following node and npm version
+echo Using node version
 "$NODE" -v
-node "$NPM" -v
+
+FULL_NPM="node $NPM"
+
+if [ $AZURE -eq 0 ]
+then
+  # not azuer, so use local npm
+  FULL_NPM="npm"
+fi
+
+echo Using npm version
+"$FULL_NPM" -v
 
 # Ensure strict ssl is turned off. This is an Azure issue.
-node "$NPM" config set strict-ssl false
+$FULL_NPM config set strict-ssl false
 
 echo Installing kajero
 
 # setup kajero
-node "$NPM" install -g kajero
+$FULL_NPM install -g kajero
 
 echo Done installing kajero
 
