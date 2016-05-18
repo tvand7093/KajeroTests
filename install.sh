@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo Using the following node and npm version.
+echo Using the following node and npm version
+echo Using NPM Path !NPM_CMD!...
+echo Using NPM Path $NPM_CMD...
+
 node -v
 npm -v
 
