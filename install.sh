@@ -27,14 +27,14 @@ then
   # Azure usage
   
   # Ensure strict ssl is turned off. This is an Azure issue.
-  $NODE $NPM config set strict-ssl false
+  "$NODE" "$NPM" config set strict-ssl false
   
   echo Using npm version
-  $NODE $NPM -v
+  "$NODE" "$NPM" -v
   
   # setup kajero
   echo Installing kajero
-  $NODE $NPM install -g kajero
+  "$NODE" "$NPM" install -g kajero
   echo Done installing kajero
 else
   echo Using npm version
