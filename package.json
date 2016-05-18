@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "bash generate.sh",
-    "start": "bash generate.sh && node ."
+    "preinstall": "bash generate.sh"
   },
   "author": "",
   "license": "ISC",
