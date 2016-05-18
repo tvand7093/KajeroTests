@@ -2,12 +2,12 @@
 NPM=$NPM_CMD
 NODE=$NODE_EXE
 
-if [ -n "$NPM_CMD" ] 
+if [ -z "$NPM" ] 
 then
   NPM=npm
 fi
 
-if [ -n "$NODE_EXE" ]
+if [ -z "$NODE" ]
 then
   NODE=node
 fi
