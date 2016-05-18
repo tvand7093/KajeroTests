@@ -4,16 +4,28 @@ echo Using the following node and npm version.
 node -v
 npm -v
 
-# ensuring latest npm version
-echo Upgrading npm version...
-npm install -g npm
-
 # Ensure strict ssl is turned off. This is an Azure issue.
 npm config set strict-ssl false
 
+# ensuring latest npm version
+echo Upgrading npm version...
+#npm install -g npm
+
+echo Done upgrading npm. New version is the following.
+npm -v
+
+echo Installing kajero
+
 # setup kajero
 npm install node_modules/kajero 
+
+echo Done installing kajero
+
+echo Running gulp on kajero
+
 node_modules/gulp/bin/gulp node_modules/kajero
+
+echo Done running gulp on kajero
 
 # get all markdown files in the markdown folder.
 FILES=./markdown/*.md
