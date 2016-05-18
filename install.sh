@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo Using the following node and npm version.
+node -v
+npm -v
+
 # Ensure strict ssl is turned off. This is an Azure issue.
 npm config set strict-ssl false
 

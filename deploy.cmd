@@ -15,10 +15,6 @@ IF %ERRORLEVEL% NEQ 0 (
   goto error
 )
 
-echo Using the following node and npm version.
-call node -v
-call npm -v
-
 :: Setup
 :: -----
 
