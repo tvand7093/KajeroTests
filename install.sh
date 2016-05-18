@@ -1,7 +1,7 @@
 #!/bin/bash
-#NPM=$NPM_CMD
+NPM=$NPM_CMD
 
-NPM="C:\Program Files (x86)\npm\3.8.6\node_modules\npm"
+#NPM="C:\Program Files (x86)\npm\3.8.6\node_modules\npm\bin\npm"
 NODE=$NODE_EXE
 
 if [ -z "$NPM" ] 
