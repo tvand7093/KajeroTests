@@ -3,3 +3,5 @@ generated
 .vs*
 .DS_Store
 *.log
+*~
+\#*\#

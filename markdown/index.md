@@ -15,3 +15,7 @@ show_footer: false
 This is the main documentation site for the Princess Programming Language. Here, you can find
 sample of how to use the language, compile the language, and other related information. This
 is just an initial site and is likely to change throughout the lifetime of the project.
+
+### Navigation
+  - [Grammar](grammar.html)
+  - [Example](examples.html)
