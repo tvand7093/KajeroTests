@@ -2,6 +2,7 @@
 NPM=$NPM_JS_PATH
 NODE=$NODE_EXE
 AZURE=1
+NEEDS_KAJERO=$(which kajero)
 
 if [ -z "$NPM" ] 
 then
@@ -31,19 +32,26 @@ then
   
   echo Using npm version
   "$NODE" "$NPM" -v
-  
-  # setup kajero
-  echo Installing kajero
-  "$NODE" "$NPM" install -g kajero
-  echo Done installing kajero
+
+  if [ -z "$NEEDS_KAJERO" ]
+  then
+      # setup kajero
+      echo Installing kajero
+      "$NODE" "$NPM" install -g kajero
+      echo Done installing kajero
+  fi
+
 else
-  echo Using npm version
-  npm -v
-  
-  # setup kajero
-  echo Installing kajero
-  npm install -g kajero
-  echo Done installing kajero
+    echo Using npm version
+    npm -v
+
+    if [ -z "$NEEDS_KAJERO" ]
+    then
+	# setup kajero
+	echo Installing kajero
+	npm install -g kajero
+	echo Done installing kajero
+    fi
 fi
 
 # get all markdown files in the markdown folder.
