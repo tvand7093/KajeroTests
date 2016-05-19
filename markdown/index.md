@@ -17,5 +17,5 @@ sample of how to use the language, compile the language, and other related infor
 is just an initial site and is likely to change throughout the lifetime of the project.
 
 ### Navigation
+  - [Documentation](documentation.html)
   - [Grammar](grammar.html)
-  - [Example](examples.html)
