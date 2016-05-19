@@ -5,7 +5,7 @@ created: Wed May 18 2016 21:06:22 GMT-0700 (PDT)
 original:
     title: My Personal Notebook
     url: http://localhost:3000/
-    show_footer: false
+show_footer: false
 ---
 
 ### Current Project Status

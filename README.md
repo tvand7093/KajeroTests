@@ -12,4 +12,4 @@ html document.
 ### Viewing the generated documents
 When updating the documentation, you can use the small node server. Simply call `npm install .` followed by `node .` to run the
 website. You can then navigate to `localhost:3000` to view the new documentation. In production, you can view the website
-by navigating to [theitalianirishman.com](www.theitalianirishman.com).
+by navigating to [this page](princess.theitalianirishman.com).
