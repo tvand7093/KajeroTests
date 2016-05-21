@@ -8,6 +8,9 @@ original:
 show_footer: false
 ---
 
+[Home](index.html)
+___
+
 ### Current Project Status
 [![Build Status](https://travis-ci.org/tvand7093/Princess-Language.svg?branch=master)](https://travis-ci.org/tvand7093/Princess-Language)
 

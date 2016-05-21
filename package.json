@@ -9,7 +9,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "bash install.sh"
+    "preinstall": "bash install.sh",
+    "start": "bash install.sh && node ."
   },
   "author": "Tyler Vanderhoef",
   "license": "ISC",
